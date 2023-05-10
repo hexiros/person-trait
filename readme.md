@@ -10,7 +10,7 @@ Next, add the service provider to the providers array in your Laravel applicatio
 ```
 'providers' => [
     // Other service providers...
-    Hexiros\PersonTrait\PersonServiceProvider::class,
+    Hexiros\PersonTrait\Providers\PersonServiceProvider::class,
 ],
 ```
 Finally, run the migrations to add the Person fields to your users table:
