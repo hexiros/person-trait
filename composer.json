@@ -10,7 +10,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hexiros\\PersonTrait\\Providers\\": "src/"
+            "Hexiros\\PersonTrait\\": "src"
         },
         "classmap": [
             "src/database/migrations"
@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hexiros\\PersonTrait\\Providers\\PersonServiceProvider"
+                "Hexiros\\PersonTrait\\PersonServiceProvider"
             ]
         }
     },
@@ -34,5 +34,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "version": "0.0.14"
+    "version": "0.0.15"
 }
