@@ -11,7 +11,10 @@
     "autoload": {
         "psr-4": {
             "Hexiros\\PersonTrait\\": "src/"
-        }
+        },
+        "classmap": [
+            "database/migrations"
+        ]
     },
     "extra": {
         "laravel": {
@@ -34,5 +37,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "version": "0.0.5"
+    "version": "0.0.6"
 }
