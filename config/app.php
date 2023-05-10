@@ -159,6 +159,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Hexiros\PersonTrait\PerosonTraitServiceProvider::class,
 
         /*
          * Application Service Providers...
