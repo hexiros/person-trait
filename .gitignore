@@ -5,6 +5,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/laravel-test
 .env
 .env.backup
 .env.production
