@@ -14,4 +14,18 @@ class PersonServiceProvider extends ServiceProvider {
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
+
+    public function bootForPublishing()
+    {
+        $this->registerPublishing();
+    }
+
+    protected function registerPublishing()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], 'person-trait-migrations');
+        }
+    }
 }
