@@ -10,7 +10,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hexiros\\PersonTrait\\": "src/"
+            "Hexiros\\PersonTrait\\Providers": "src/"
         },
         "classmap": [
             "src/database/migrations"
@@ -34,5 +34,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "version": "0.0.12"
+    "version": "0.0.13"
 }
