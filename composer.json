@@ -1,0 +1,28 @@
+{
+    "name": "hexiros/person-trait",
+    "description": "A simple package that adds Person trait to any model.",
+    "type": "library",
+    "license": "MIT License",
+    "autoload": {
+        "psr-4": {
+            "Hexiros\\PersonTrait\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MyPersonPackage\\PersonServiceProvider"
+            ],
+            "config": [
+                "person.php"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Ruel Rule",
+            "email": "ruel@hexiros.com"
+        }
+    ],
+    "require": {}
+}
