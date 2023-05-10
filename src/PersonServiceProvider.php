@@ -11,5 +11,7 @@ class PersonServiceProvider extends ServiceProvider {
         foreach ($this->app->make('config')->get('person.models', []) as $model) {
             $model::observe(PersonTraitObserver::class);
         }
+
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 }
