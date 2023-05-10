@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexiros\PersonTrait;
+namespace Hexiros\PersonTrait\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
