@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hexiros\\PersonTrait\\PersonServiceProvider"
+                "Hexiros\\PersonTrait\\Providers\\PersonServiceProvider"
             ]
         }
     },
@@ -34,5 +34,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "version": "0.0.18"
+    "version": "0.0.19"
 }
