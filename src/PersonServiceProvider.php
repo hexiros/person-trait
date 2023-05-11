@@ -52,7 +52,7 @@ class PersonServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../database/migrations' => $this->getMigrationFileName('create_person_info_table.php'),
+                __DIR__.'/../database/migrations/create_person_info_table.php.stub' => $this->getMigrationFileName('create_person_info_table.php'),
             ], 'person-trait-migrations');
         }
     }
