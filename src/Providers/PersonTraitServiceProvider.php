@@ -2,44 +2,32 @@
 
 namespace Hexiros\PersonTrait\Providers;
 
+use Hexiros\PersonTrait\IsPerson;
 use Illuminate\Support\Collection;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 
-class PersonServiceProvider extends ServiceProvider
+class PersonTraitServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap the application services.
-     *
-     * @return void
-     */
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
-        $this->registerPublishing();
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../database/migrations/create_people_table.php.stub' => $this->getMigrationFileName('create_people_table.php'),
+            ], 'person-trait-migrations');
+        }
+
+        IsPerson::creating(function ($person) {
+            $person->fill($person->getPersonData());
+        });
     }
 
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
     public function register()
     {
         //
-    }
-
-    /**
-     * Register the package's publishable resources.
-     *
-     * @return void
-     */
-    private function registerPublishing()
-    {
-        $this->publishes([
-            __DIR__.'/../database/migrations/create_personal_information_table.php.stub' => $this->getMigrationFileName('create_personal_information_table'),
-        ], 'person-trait-migration');
     }
 
     /**
