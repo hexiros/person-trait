@@ -2,7 +2,7 @@
 
 namespace Hexiros\PersonTrait\Providers;
 
-use Hexiros\PersonTrait\IsPerson;
+use Hexiros\PersonTrait\Person;
 use Illuminate\Support\Collection;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Database\Eloquent\Model;
@@ -20,7 +20,7 @@ class PersonTraitServiceProvider extends ServiceProvider
             ], 'person-trait-migrations');
         }
 
-        IsPerson::creating(function ($person) {
+        Person::creating(function ($person) {
             $person->fill($person->getPersonData());
         });
     }
