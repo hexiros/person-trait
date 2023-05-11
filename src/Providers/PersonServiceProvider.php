@@ -3,6 +3,7 @@
 namespace Hexiros\PersonTrait\Providers;
 
 use Illuminate\Support\Collection;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
 class PersonServiceProvider extends ServiceProvider
